@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.droidcafe.MainActivity">
+    <item
+        android:id="@+id/action_sort"
+        android:orderInCategory="20"
+        android:title="@string/action_favorites"
+        android:icon="@drawable/ic_action_sort"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_favorites"
+        android:orderInCategory="30"
+        android:title="@string/action_favorites"
+        android:icon="@drawable/ic_action_favorites"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="50"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+</menu>
