@@ -1,5 +1,6 @@
 package com.example.droidcafe;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class MovieResults {
@@ -31,7 +32,7 @@ public class MovieResults {
         this.results = results;
     }
 
-    public static class ResultsBean {
+    public static class ResultsBean implements Serializable {
         /**
          * adult : false
          * backdrop_path : /2Eewgp7o5AU1xCataDmiIL2nYxd.jpg

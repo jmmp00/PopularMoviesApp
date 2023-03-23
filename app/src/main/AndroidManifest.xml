@@ -20,8 +20,8 @@
             android:exported="false"
             android:label="@string/title_activity_settings" />
         <activity
-            android:name=".OrderActivity"
-            android:label="@string/title_activity_order"
+            android:name=".MovieDetailsActivity"
+            android:label="@string/movie_details_activity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

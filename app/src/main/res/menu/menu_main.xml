@@ -3,17 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.droidcafe.MainActivity">
     <item
-        android:id="@+id/action_sort"
-        android:orderInCategory="20"
-        android:title="@string/action_favorites"
-        android:icon="@drawable/ic_action_sort"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/action_favorites"
-        android:orderInCategory="30"
+        android:orderInCategory="10"
         android:title="@string/action_favorites"
         android:icon="@drawable/ic_action_favorites"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_sort_popular"
+        android:orderInCategory="20"
+        android:title="@string/action_sort_popular_message"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sort_top"
+        android:orderInCategory="30"
+        android:title="@string/action_sort_top_message"
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="50"
