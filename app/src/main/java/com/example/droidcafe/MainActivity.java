@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             "com.example.android.droidcafe.extra.MESSAGE";
 
     public static String BASE_URL = "https://api.themoviedb.org";
-    public static String API_KEY = "1023df71e14cdb4fd6b1af66d621ac84";
+    public static String API_KEY = "YOUR_API_KEY_HERE";
     public static int PAGE = 1;
     public static String CATEGORY = "popular";
 
