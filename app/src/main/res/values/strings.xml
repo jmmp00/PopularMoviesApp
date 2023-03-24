@@ -31,4 +31,10 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="trailer_button_text">Watch Trailer</string>
+    <string name="trailers_title">Trailers:</string>
+    <string name="favorite_button_text">Favorite</string>
+    <string name="movie_poster_description">Movie Poster</string>
+    <string name="reviews_title_text">Reviews:</string>
+    <string name="reviews_button_text">Read Review</string>
 </resources>

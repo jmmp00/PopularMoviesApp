@@ -1,6 +1,5 @@
 package com.example.droidcafe;
 
-import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -27,22 +26,21 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    public static String API_KEY = "YOUR_API_KEY_HERE";
+    public static String API_KEY = "1023df71e14cdb4fd6b1af66d621ac84";
     public static int PAGE = 1;
     public static String CATEGORY = "popular";
     private final BroadcastReceiver networkChangeReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (isNetworkConnected(MainActivity.this)) {
-                // Internet connection is available, do something
+                // internet connection is available, show movie posters
                 Log.d("MainActivity", "Internet connection is available");
             } else {
-                // Internet connection is not available, do something else
+                // Internet connection is not available, show error message
                 Log.d("MainActivity", "Internet connection is not available");
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Network Connection Error")
-                        .setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
+                builder.setTitle("Network Connection Error").setPositiveButton("OK", (dialog, which) -> dialog.dismiss());
 
                 AlertDialog dialog = builder.create();
                 dialog.show();
@@ -59,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        // Register the broadcast receiver to listen for changes in network connectivity
+        // register the broadcast receiver to listen for changes in network connectivity
         IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(networkChangeReceiver, filter);
 
@@ -75,12 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // add items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -144,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isNetworkConnected(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        // get information about the currently active network
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnected();
     }

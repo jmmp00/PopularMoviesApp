@@ -10,10 +10,7 @@ public class RetrofitSingleton {
 
     private RetrofitSingleton() {
         String BASE_URL = "https://api.themoviedb.org";
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         myInterface = retrofit.create(MovieFetcher.class);
     }
 

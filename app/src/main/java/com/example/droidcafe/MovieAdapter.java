@@ -42,6 +42,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             intent.putExtra("movie", movie);
             view.getContext().startActivity(intent);
         });
+
     }
 
     @Override
