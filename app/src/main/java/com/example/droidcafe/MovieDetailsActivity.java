@@ -90,7 +90,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
             call2.enqueue(new Callback<ReviewsResults>() {
                 @Override
-                public void onResponse(Call<ReviewsResults> call, Response<ReviewsResults> response) {
+                public void onResponse(@NonNull Call<ReviewsResults> call, @NonNull Response<ReviewsResults> response) {
                     ReviewsResults reviewsResults = response.body();
                     if (reviewsResults != null && reviewsResults.getResults().size() > 0) {
                         List<ReviewsResults.ResultsBean> reviews = reviewsResults.getResults();

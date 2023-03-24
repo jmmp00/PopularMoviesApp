@@ -1,5 +1,6 @@
 package com.example.droidcafe;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -26,7 +27,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    public static String API_KEY = "1023df71e14cdb4fd6b1af66d621ac84";
+    public static String API_KEY = "YOUR_API_KEY_HERE";
     public static int PAGE = 1;
     public static String CATEGORY = "popular";
     private final BroadcastReceiver networkChangeReceiver = new BroadcastReceiver() {
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
